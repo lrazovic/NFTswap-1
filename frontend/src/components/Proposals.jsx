@@ -197,6 +197,7 @@ export default function Proposals() {
         await callDeleteProposal(asset.proposalId.toString())
         setDeleteProposalLoading(false)
         setShowModal(false)
+        setReload(!reload)
         notify(Ok, "Proposal deleted successfully")
       } catch (error) {
         setError(error.message)
